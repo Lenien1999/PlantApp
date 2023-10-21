@@ -35,7 +35,7 @@ class PlantDetails extends StatelessWidget {
                       }));
                     },
                     icon: Badge(
-                        label: Text(value.cartItem.length.toString()),
+                        label: Text(value.cartBox.length.toString()),
                         child: const Icon(Icons.shopping_cart_outlined)))
               ],
             ),

@@ -1,14 +1,30 @@
+import 'package:hive/hive.dart';
+
+part 'plantmodel.g.dart';
+
+@HiveType(typeId: 0)
 class Plants {
+  @HiveField(0)
   int id;
+  @HiveField(1)
   String name;
+  @HiveField(2)
   String description;
+  @HiveField(3)
   String images;
+  @HiveField(4)
   double price;
+  @HiveField(5)
   bool favorite;
+  @HiveField(6)
   String pot;
+  @HiveField(7)
   String temperature;
+  @HiveField(8)
   String height;
+  @HiveField(9)
   int quantity;
+  @HiveField(10)
   double totalPrice;
 
   Plants({
@@ -48,7 +64,7 @@ List<Plants> plantsList = [
       height: '10cm to 20cm',
       pot: 'Ceramic',
       temperature: '25-30',
-      price: 20,
+      price: 30,
       id: 2),
   Plants(
       temperature: '20-22',
@@ -58,7 +74,7 @@ List<Plants> plantsList = [
       images: 'assets/images/plant3.png',
       height: '30cm to 50cm',
       pot: 'Pot',
-      price: 20,
+      price: 60,
       id: 3),
   Plants(
       temperature: '23-30',
@@ -68,7 +84,7 @@ List<Plants> plantsList = [
       images: 'assets/images/plant4.png',
       height: '30cm to 50cm',
       pot: 'Pot',
-      price: 20,
+      price: 50,
       id: 4),
   Plants(
       temperature: '15-20',
@@ -78,7 +94,7 @@ List<Plants> plantsList = [
       images: 'assets/images/plant5.png',
       height: '30cm to 50cm',
       pot: 'Ceramic',
-      price: 20,
+      price: 90,
       id: 5),
   Plants(
       temperature: '25-30',

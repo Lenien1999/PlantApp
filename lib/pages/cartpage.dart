@@ -39,7 +39,7 @@ class _CartPageState extends State<CartPage> {
                 IconButton(
                     onPressed: () {},
                     icon: Badge(
-                        label: Text(value.cartItem.length.toString()),
+                        label: Text(value.cartBox.length.toString()),
                         child: const Icon(Icons.shopping_cart_outlined)))
               ],
             ),
@@ -52,9 +52,9 @@ class _CartPageState extends State<CartPage> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.6,
                     child: ListView.builder(
-                        itemCount: value.cartItem.length,
+                        itemCount: value.cartBox.length,
                         itemBuilder: (context, index) {
-                          final items = value.cartItem[index];
+                          final items = value.cartBox[index];
 
                           void updateTotalPrice(Plants item) {
                             item.totalPrice = item.calculateTotalPrice();
@@ -176,7 +176,7 @@ class _CartPageState extends State<CartPage> {
                                       ),
                                       IconButton(
                                           onPressed: () {
-                                            value.removeCart(items);
+                                             value.removeCart(items);
                                             value.updatePrice;
                                           },
                                           icon: const Icon(

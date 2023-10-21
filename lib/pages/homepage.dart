@@ -138,7 +138,7 @@ class _HomepageState extends State<Homepage> {
               height: 15,
             ),
             Text(
-              'Found \n10 Results',
+              'Found \n${displayNewPlanList.length} Results',
               style:
                   appstyle(color: Colors.black, size: 20, ff: FontWeight.bold),
             ),
